@@ -18,27 +18,27 @@
       </div>
       <div id="loading-cover">
       <div id="unity-loading-bar">
-      <div id="unity-logo"><img src="logo.jpeg"></div>
+      <div id="unity-logo"><img src="https://cdn.jsdelivr.net/gh/Mezzatu/archers@main/logo.jpeg"></div>
       <div class="progress-spinner-container">
-      <div class="spinner-left"><img src="spinner.png"></div>
+      <div class="spinner-left"><img src="https://cdn.jsdelivr.net/gh/Mezzatu/archers@main/spinner.png"></div>
       <div id="unity-progress-bar-empty">
       <div id="unity-progress-bar-full"></div>
       </div>
-      <div class="spinner-right"><img src="spinner.png"></div>
+      <div class="spinner-right"><img src="https://cdn.jsdelivr.net/gh/Mezzatu/archers@main/spinner.png"></div>
       </div>
       </div>
       </div>
       <script>
-        // IMPORTANT: Removed 'buildUrl +' because your URLs are already absolute CDN links.
-        // If these were relative paths from your game's root, 'buildUrl' would make sense.
-        // But since they are full JSDelivr URLs, prepending "Build" would break them.
+        // FIX: The 'buildUrl' variable is now completely removed.
+        // All URLs in the config are now directly defined as absolute JSDelivr CDN links,
+        // which prevents the "Buildhttps://" invalid URL issue.
         const loaderUrl = "https://cdn.jsdelivr.net/gh/Mezzatu/archers@main/Build/v111.loader.js";
         const config = {
           dataUrl: "https://cdn.jsdelivr.net/gh/Mezzatu/archers@main/Build/6697b6deba8b617c67b69c55dcd07cb1.data.unityweb",
           frameworkUrl: "https://cdn.jsdelivr.net/gh/Mezzatu/archers@main/Build/0be3c3ee7115b26e1ae28e643afdf1f2.js.unityweb",
-          // Corrected the codeUrl as the original had a duplicate part.
+          // Confirmed correct JSDelivr CDN URL for raw .wasm file.
           codeUrl: "https://cdn.jsdelivr.net/gh/Mezzatu/archers@main/Build/b3397c29f6878557c1c614cbf9e196ea.wasm.unityweb",
-          streamingAssetsUrl: "StreamingAssets", // Keep this if 'StreamingAssets' is a relative folder in your GitHub repo
+          streamingAssetsUrl: "StreamingAssets", // Keep this as a relative path if this folder is in your GitHub repo
           companyName: "Ericetto",
           productName: "Ragdoll Archers",
           productVersion: "0.1",
